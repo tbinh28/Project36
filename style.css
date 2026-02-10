@@ -169,3 +169,49 @@ footer { background: #1a1a1a; color: #ccc; padding: 40px 0; font-size: 0.85rem; 
     background: #a00000;
     box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
 }
+/* --- STYLE CHO DROPDOWN NAV --- */
+nav ul li {
+    position: relative; /* Gốc để menu con bám vào */
+}
+
+/* Ẩn menu con mặc định */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #8b0000; /* Cùng màu với Nav bar */
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1001;
+    top: 100%; /* Hiện ngay dưới Nav chính */
+    left: 0;
+    list-style: none;
+    padding: 0;
+}
+
+/* Style cho các mục trong menu con */
+.dropdown-content li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.dropdown-content li a {
+    color: #fff !important;
+    padding: 12px 20px !important;
+    font-size: 0.8rem !important;
+    text-transform: none;
+    text-align: left;
+}
+
+.dropdown-content li a:hover {
+    background-color: #a00000; /* Màu đỏ sáng hơn khi di chuột */
+}
+
+/* Hiện menu con khi di chuột vào mục II */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Thêm hiệu ứng mũi tên đổi màu hoặc xoay nếu thích */
+.dropdown:hover .dropbtn {
+    background-color: #a00000;
+}
